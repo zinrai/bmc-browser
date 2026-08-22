@@ -1,0 +1,36 @@
+{
+  "policies": {
+    "DisableAppUpdate": true,
+    "DisableTelemetry": true,
+    "DisableFirefoxStudies": true,
+    "DisablePocket": true,
+    "DisableFirefoxAccounts": true,
+    "DontCheckDefaultBrowser": true,
+    "NoDefaultBookmarks": true,
+    "OverrideFirstRunPage": "",
+    "OverridePostUpdatePage": "",
+    "PasswordManagerEnabled": false,
+    "OfferToSaveLogins": false,
+    "PromptForDownloadLocation": false,
+    "Handlers": {
+      "mimeTypes": {
+        "application/x-java-jnlp-file": {
+          "action": "useHelperApp",
+          "ask": false,
+          "handlers": [
+            { "name": "javaws", "path": "/usr/bin/javaws" }
+          ]
+        }
+      },
+      "extensions": {
+        "jnlp": {
+          "action": "useHelperApp",
+          "ask": false,
+          "handlers": [
+            { "name": "javaws", "path": "/usr/bin/javaws" }
+          ]
+        }
+      }
+    }
+  }
+}

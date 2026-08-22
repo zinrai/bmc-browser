@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Openbox reads its own defaults for anything not named here. The only thing
+  this container needs to override is that Firefox should come up filling the
+  screen, minus the space tint2 reserves for the task bar.
+-->
+<openbox_config xmlns="http://openbox.org/3.4/rc">
+  <applications>
+    <application name="Navigator" class="firefox-esr">
+      <maximized>yes</maximized>
+      <position force="no"/>
+    </application>
+  </applications>
+</openbox_config>
