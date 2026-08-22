@@ -24,7 +24,7 @@ There is no VNC password. Publish the port on a loopback address, as above, and 
 
 ## Notes
 
-Self-signed BMC certificates show the standard Firefox warning page once per session. Accept it in the session under.
+Self-signed BMC certificates show the standard Firefox warning page once per session. Accept it in the session.
 
 KVM consoles open as their own window on top of the browser. Use the task bar at the bottom of the screen to switch between them.
 
