@@ -18,7 +18,7 @@
           "action": "useHelperApp",
           "ask": false,
           "handlers": [
-            { "name": "javaws", "path": "/usr/bin/javaws" }
+            { "name": "javaws", "path": "/usr/local/bin/javaws" }
           ]
         }
       },
@@ -27,7 +27,7 @@
           "action": "useHelperApp",
           "ask": false,
           "handlers": [
-            { "name": "javaws", "path": "/usr/bin/javaws" }
+            { "name": "javaws", "path": "/usr/local/bin/javaws" }
           ]
         }
       }

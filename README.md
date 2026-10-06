@@ -16,6 +16,12 @@ The container exits when Firefox exits, and `--rm` removes it. Keeping it in the
 
 There is no VNC password. Publish the port on a loopback address, as above, and let whatever already controls access to the host control access to the console.
 
+## Images
+
+Two images are built: `ghcr.io/zinrai/bmc-browser`, and `ghcr.io/zinrai/bmc-browser:latest-java8` (or `<version>-java8`) for KVM consoles that need Java 8.
+
+`docker build .` builds the first and `docker build --target java8 .` the second.
+
 ## Configuration
 
 - `BMC_URL` (required) - URL of the BMC Web UI, for example `https://10.0.0.12/`. Passed to Firefox as given.
