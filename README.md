@@ -18,7 +18,7 @@ There is no VNC password. Publish the port on a loopback address, as above, and 
 
 ## Images
 
-Two images are built: `ghcr.io/zinrai/bmc-browser`, and `ghcr.io/zinrai/bmc-browser:latest-java8` (or `<version>-java8`) for KVM consoles that need Java 8.
+Two images are built: `ghcr.io/zinrai/bmc-browser`, and `ghcr.io/zinrai/bmc-browser:latest-java8` (or `<version>-java8`) for older KVM consoles that the first cannot run.
 
 `docker build .` builds the first and `docker build --target java8 .` the second.
 

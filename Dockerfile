@@ -87,6 +87,14 @@ RUN chmod 0644 /etc/apt/keyrings/adoptium.asc \
 COPY --from=icedtea-web /opt/icedtea-web /opt/icedtea-web
 # policies.json hands .jnlp files to this path in either image
 RUN ln -s /opt/icedtea-web/bin/javaws /usr/local/bin/javaws
+# Not the JRE's own java.security edited in place: a file here shows exactly
+# what is relaxed, and an edit can miss without a sound once an update
+# rewords it
+COPY java8/java.security /etc/bmc-browser/java.security
+RUN chmod 0644 /etc/bmc-browser/java.security
+# Not a wrapper around javaws: JAVA_TOOL_OPTIONS reaches the JVM however
+# javaws is started
+ENV JAVA_TOOL_OPTIONS=-Djava.security.properties=/etc/bmc-browser/java.security
 USER bmc
 
 FROM base AS netx

@@ -1,0 +1,9 @@
+# The JRE's defaults as of 8u504, less their SHA-1 terms. Restated whole, not
+# trimmed: a key here replaces the JRE's value, so terms the JRE adds later are
+# not picked up
+jdk.jar.disabledAlgorithms=MD2, MD5, RSA keySize < 1024, \
+      DSA keySize < 1024, \
+      include jdk.disabled.namedCurves
+jdk.certpath.disabledAlgorithms=MD2, MD5, SHA1 jdkCA & usage TLSServer, \
+    RSA keySize < 1024, DSA keySize < 1024, EC keySize < 224, \
+    include jdk.disabled.namedCurves
